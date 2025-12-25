@@ -5,20 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Talking Rabbit</title>
     <meta name="theme-color" content="#f093fb">
-    
-    <!-- BANAR AD CODE START -->
-    <script>
-      atOptions = {
-        'key' : 'a14a2842afcaf02a4fca4ffc3031e4ee',
-        'format' : 'iframe',
-        'height' : 60,
-        'width' : 468,
-        'params' : {}
-      };
-    </script>
-    <script src="https://www.highperformanceformat.com/a14a2842afcaf02a4fca4ffc3031e4ee/invoke.js"></script>
-    <!-- BANAR AD CODE END -->
-
     <style>
         /* --- GLOBAL STYLES --- */
         * {
@@ -108,6 +94,17 @@
             transition: opacity 0.5s ease;
         }
 
+        /* AD CONTAINER STYLE */
+        #ad-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            z-index: 100; /* Video er upore thakbe */
+            background: rgba(0,0,0,0.1); /* Ektu dark background jate ad bojha jay */
+        }
+
         /* Video Container */
         #video-container {
             position: absolute;
@@ -169,7 +166,8 @@
         /* --- STATUS BADGE --- */
         #status-badge {
             position: absolute;
-            top: 20px;
+            /* AD er jonno niche namano hoyeche (Ad height 60px + padding) */
+            top: 70px; 
             left: 50%;
             transform: translateX(-50%);
             background: linear-gradient(135deg, #a78bfa, #8b5cf6);
@@ -427,6 +425,23 @@
     <!-- MAIN APP SCREEN -->
     <div id="app-screen">
         
+        <!-- ============================== -->
+        <!-- ADSTERRA BANNER AD CODE HERE -->
+        <!-- ============================== -->
+        <div id="ad-container">
+            <script>
+              atOptions = {
+                'key' : 'a14a2842afcaf02a4fca4ffc3031e4ee',
+                'format' : 'iframe',
+                'height' : 60,
+                'width' : 468,
+                'params' : {}
+              };
+            </script>
+            <script src="https://www.highperformanceformat.com/a14a2842afcaf02a4fca4ffc3031e4ee/invoke.js"></script>
+        </div>
+        <!-- ============================== -->
+
         <!-- Video Backgrounds -->
         <div id="video-container">
             <!-- Loop Idle -->
